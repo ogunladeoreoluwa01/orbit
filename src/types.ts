@@ -11,7 +11,7 @@ export interface FeedItem {
     userImageUrl: string;
     text: string;
     mediaUrl?: string;
-    likes: number;
+    likes: string[];
     comments: Comment[];
     timestamp: string;
 }

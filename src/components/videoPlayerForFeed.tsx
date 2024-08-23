@@ -1,9 +1,10 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { MdOutlinePlayCircle,MdOutlinePauseCircleOutline } from "react-icons/md";
+import {
+  MdOutlinePlayCircle,
+  MdOutlinePauseCircleOutline,
+} from "react-icons/md";
 import { Badge } from "@/components/ui/badge";
-
-
 
 interface CustomVideoPlayerUserFeedProps {
   src: string;
@@ -15,18 +16,19 @@ const CustomVideoPlayerUserFeed: React.FC<CustomVideoPlayerUserFeedProps> = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [timeLeft, setTimeLeft] = useState("0:00");
-  const [showPlayIcon, setShowPlayIcon] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   const togglePlayPause = () => {
     const videoElement = videoRef.current;
     if (videoElement) {
       if (isPlaying) {
         videoElement.pause();
+        setIsPaused(true);
       } else {
         videoElement.play();
+        setIsPaused(false);
       }
       setIsPlaying(!isPlaying);
-      setShowPlayIcon(!isPlaying); // Show play icon when paused
     }
   };
 
@@ -74,23 +76,46 @@ const CustomVideoPlayerUserFeed: React.FC<CustomVideoPlayerUserFeedProps> = ({
 
   useEffect(() => {
     const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.addEventListener("timeupdate", updateTimeLeft);
-      videoElement.addEventListener("volumechange", handleVolumeChange);
 
-      // Start playing video on mobile devices automatically
-      if (window.innerWidth <= 768) {
-        videoElement.play();
-        setIsPlaying(true);
-      }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (
+              window.innerWidth <= 768 &&
+              !isPlaying &&
+              videoElement &&
+              !isPaused
+            ) {
+              videoElement.play();
+              setIsPlaying(true);
+            }
+          } else {
+            if (isPlaying && videoElement) {
+              videoElement.pause();
+              setIsPlaying(false);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (videoElement) {
+      observer.observe(videoElement);
     }
+
+    videoElement?.addEventListener("timeupdate", updateTimeLeft);
+    videoElement?.addEventListener("volumechange", handleVolumeChange);
+
     return () => {
       if (videoElement) {
+        observer.unobserve(videoElement);
         videoElement.removeEventListener("timeupdate", updateTimeLeft);
         videoElement.removeEventListener("volumechange", handleVolumeChange);
       }
     };
-  }, [src]);
+  }, [isPlaying, isPaused]);
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -106,7 +131,6 @@ const CustomVideoPlayerUserFeed: React.FC<CustomVideoPlayerUserFeedProps> = ({
 
       videoElement.addEventListener("loadedmetadata", handleMetadataLoaded);
 
-      // Cleanup listener on component unmount
       return () => {
         videoElement.removeEventListener(
           "loadedmetadata",
@@ -130,17 +154,11 @@ const CustomVideoPlayerUserFeed: React.FC<CustomVideoPlayerUserFeedProps> = ({
         playsInline
         onClick={togglePlayPause}
       />
-      {!showPlayIcon && (
-        <div className="absolute  bottom-2 right-1 transition-all text-white text-2xl bg-black bg-opacity-60 rounded-full p-2 text-center flex justify-center items-center ">
-          {isPlaying ? (
-            <MdOutlinePauseCircleOutline />
-          ) : (
-            <MdOutlinePlayCircle />
-          )}
-        </div>
-      )}
+      <div className="absolute bottom-2 right-1 transition-all text-white text-xl md:text-2xl bg-black bg-opacity-60 rounded-full p-1 md:p-2 text-center flex justify-center items-center">
+        {isPlaying ? <MdOutlinePauseCircleOutline /> : <MdOutlinePlayCircle />}
+      </div>
 
-      <Badge className="absolute top-2 left-2 text-[0.55rem] tabular-nums  py-1 px-1  bg-opacity-60 text-white  rounded">
+      <Badge className="absolute top-2 left-2 text-[0.55rem] tabular-nums py-1 px-1 bg-opacity-60 text-white rounded">
         {timeLeft}
       </Badge>
     </div>

@@ -1,0 +1,61 @@
+links for urls videos and pfp
+
+
+pfp 
+https://i.pinimg.com/originals/87/42/4a/87424a515a402f676ed07c382f28972b.jpg
+https://i.pinimg.com/originals/da/07/93/da0793eda161a2f9b620f16601040d20.jpg
+https://i.pinimg.com/originals/2c/5f/5c/2c5f5c9a9067c00f51d8ead82b5f1661.png
+https://i.pinimg.com/originals/8c/52/8a/8c528a4029698d3c4a1fd5fc4bea97fb.png
+https://i.pinimg.com/originals/11/f5/80/11f5806d42b65a325b57f83d3379c685.jpg
+https://i.pinimg.com/originals/01/03/00/010300bfd0f1af05a0dd2face4476fe9.jpg
+https://i.pinimg.com/originals/b2/10/83/b21083415c5647a79d2dd3eb2196b39f.jpg
+https://i.pinimg.com/originals/6d/87/0a/6d870a5aa844cecc8cd4637fd6545f1b.jpg
+
+
+
+posts
+https://i.pinimg.com/originals/ba/9b/95/ba9b95658404d4e5e2202e627119315b.jpg
+https://i.pinimg.com/originals/ca/91/68/ca91685c9494c75e368ebda10171b740.jpg
+https://i.pinimg.com/originals/a4/f5/b6/a4f5b68acaa5dcd2709a290ee41fb4f2.jpg
+https://i.pinimg.com/originals/27/65/5a/27655a6a4ec6c3dcff2ab1c2fedfa2e5.jpg
+https://i.pinimg.com/originals/8f/7b/88/8f7b88562baacd9784ad80eca790319a.jpg
+https://i.pinimg.com/originals/8c/e8/e6/8ce8e611a0d66bfff6a01d1198fad2de.jpg
+https://i.pinimg.com/originals/22/07/7f/22077f320161f5f519b25c8a0f99a802.jpg
+https://i.pinimg.com/originals/1e/2c/91/1e2c91fc1ed9a3b11f79889d8ccd0434.jpg
+https://i.pinimg.com/originals/13/9c/e8/139ce8cca6af45c68cde4b72f9f36964.png
+https://i.pinimg.com/originals/fe/aa/0e/feaa0e423c41c094544e75dd2f4108b7.jpg
+https://i.pinimg.com/originals/f5/d4/75/f5d475dcbc657830c77ab317d34611aa.gif
+https://i.pinimg.com/originals/91/c7/56/91c75640703760e350f6e197fd4c2413.gif
+https://i.pinimg.com/originals/b2/5e/c1/b25ec1e08ebbee981b4c321393718d6f.gif
+https://v1.pinimg.com/videos/iht/720p/b2/ea/76/b2ea7693c7b19c67affc69e0966e98e8.mp4
+https://v1.pinimg.com/videos/iht/720p/fd/4a/95/fd4a959ea6953d9359b1a05593fc43c2.mp4
+
+
+
+
+
+
+
+
+
+try:
+    print(x)
+except:
+    print all catch error
+else:   
+    no erro was found
+
+finally:
+    i ran
+
+
+raise TypeError("costom message")
+
+
+
+
+
+
+if
+elif
+else

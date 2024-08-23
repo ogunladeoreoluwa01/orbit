@@ -12,3 +12,8 @@ export const isImage = (url: string): boolean => {
 export const isVideo = (url: string): boolean => {
   return /\.(mp4|webm|ogg|mov|avi|wmv|flv|mkv)$/.test(url);
 };
+
+export const getFileTypeFromUrl = (url: string): string => {
+  const fileExtension = url.split(".").pop()?.toLowerCase();
+  return fileExtension || "NF";
+};
