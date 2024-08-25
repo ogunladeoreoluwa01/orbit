@@ -517,7 +517,7 @@ const feed: FeedItem[] = [
 
 const UserFeedComponent: React.FC = () => {
   return (
-    <div className="w-full md:w-[65dvw] columns-2 md:columns-3 gap-2 space-y-2  md:gap-4 md:space-y-4 md:p-4">
+    <div className="w-full  columns-2 md:columns-3 gap-2 space-y-2  md:gap-4 md:space-y-4 md:p-4">
       {feed.map((item) => (
       <UserFeedCardComp feed={item} key={item.id} />
       ))}

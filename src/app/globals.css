@@ -2,62 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
-    --background: 230 35% 98%; /* #F1F5FF */ /* Light sky background */
-    --foreground: 224 60% 10%; /* #1A202E */ /* Darker text for contrast */
-    --card: 230 35% 98%; /* #F1F5FF */ /* Consistent light card background */
-    --card-foreground: 224 60% 10%; /* #1A202E */ /* Same dark text */
-    --popover: 230 35% 98%; /* #F1F5FF */ /* Light background for popovers */
-    --popover-foreground: 224 60% 10%; /* #1A202E */ /* Darker text */
-    --primary: 260 95% 70%; /* #7B93FF */ /* Deep space blue */
-    --primary-foreground: 240 45% 95%; /* #E1E7FF */ /* Pale star light */
-    --secondary: 220 35% 92%; /* #D0E1FF */ /* Light cosmic blue */
-    --secondary-foreground: 220 50% 20%; /* #2A3B5F */ /* Deeper contrast */
-    --muted: 220 35% 92%; /* #D0E1FF */ /* Soft muted color */
-    --muted-foreground: 220 20% 40%; /* #6C7A94 */ /* Medium contrast */
-    --accent: 270 70% 80%; /* #A1B9FF */ /* Vibrant space glow */
-    --accent-foreground: 220 50% 20%; /* #2A3B5F */ /* Deep contrast */
-    --destructive: 0 70% 60%; /* #FF4C4C */ /* Red like a dying star */
-    --destructive-foreground: 210 20% 98%; /* #EBF5FF */ /* Pale light */
-    --border: 220 25% 85%; /* #C1D1F0 */ /* Soft border color */
-    --input: 220 25% 85%; /* #C1D1F0 */ /* Consistent with borders */
-    --ring: 260 95% 70%; /* #7B93FF */ /* Deep space blue ring */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
     --radius: 0.5rem;
-    --chart-1: 260 80% 60%; /* #829FF9 */ /* Nebula blue */
-    --chart-2: 190 60% 40%; /* #28A4BD */ /* Deep sea teal */
-    --chart-3: 45 80% 65%; /* #F5B050 */ /* Solar gold */
-    --chart-4: 280 65% 70%; /* #B780FF */ /* Cosmic purple */
-    --chart-5: 340 75% 65%; /* #F03A84 */ /* Pulsar pink */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
-    --background: 224 60% 8%; /* #1B2130 */ /* Deep space background */
-    --foreground: 240 40% 90%; /* #E0E6F8 */ /* Soft starlight text */
-    --card: 224 60% 10%; /* #1C273A */ /* Dark cosmic card background */
-    --card-foreground: 240 40% 90%; /* #E0E6F8 */ /* Starlight text */
-    --popover: 224 60% 10%; /* #1C273A */ /* Consistent dark background */
-    --popover-foreground: 240 40% 90%; /* #E0E6F8 */ /* Soft starlight text */
-    --primary: 260 80% 60%; /* #5B75FF */ /* Bright star blue */
-    --primary-foreground: 240 40% 90%; /* #E0E6F8 */ /* Soft starlight */
-    --secondary: 230 35% 20%; /* #2A3451 */ /* Dark c.osmic blue */
-    --secondary-foreground: 240 40% 90%; /* #E0E6F8 */ /* Soft starlight */
-    --muted: 230 35% 20%; /* #2A3451 */ /* Consistent muted dark color */
-    --muted-foreground: 220 20% 60%; /* #7B92B2 */ /* Medium contrast */
-    --accent: 230 35% 20%; /* #2A3451 */ /* Consistent accent */
-    --accent-foreground: 240 40% 90%; /* #E0E6F8 */ /* Soft starlight */
-    --destructive: 0 70% 50%; /* #FF4C4C */ /* Bright danger red */
-    --destructive-foreground: 240 40% 90%; /* #E0E6F8 */ /* Starlight text */
-    --border: 230 35% 20%; /* #2A3451 */ /* Soft border */
-    --input: 230 35% 20%; /* #2A3451 */ /* Consistent input */
-    --ring: 260 80% 60%; /* #5B75FF */ /* Bright star ring */
-    --chart-1: 220 70% 50%; /* #4B6CE5 */ /* Nebula blue */
-    --chart-2: 190 60% 45%; /* #29A19C */ /* Deep sea teal */
-    --chart-3: 45 80% 65%; /* #F5B050 */ /* Solar gold */
-    --chart-4: 280 65% 70%; /* #B780FF */ /* Cosmic purple */
-    --chart-5: 340 75% 65%; /* #F03A84 */ /* Pulsar pink */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
+
 
 @layer base {
   * {
@@ -87,4 +89,22 @@
         }
 
     }
+}
+.background-container {
+  position: relative;
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.pinimg.com/originals/a2/e9/9c/a2e99c5ef796f892b3834804dec71c14.gif');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.03;
+  filter: blur(0.1px);
+  z-index: -1; /* Ensure it stays behind other content */
 }

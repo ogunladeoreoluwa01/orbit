@@ -149,16 +149,16 @@ const CustomVideoPlayerUserFeed: React.FC<CustomVideoPlayerUserFeedProps> = ({
       <video
         ref={videoRef}
         src={src}
-        className="w-full h-auto cursor-pointer rounded-[0.5rem] lg:opacity-40 lg:group-hover:opacity-100 transition-all"
+        className="w-full h-auto cursor-pointer rounded-[0.5rem] lg:opacity-40 lg:group-hover:opacity-100 transition-all duration-200 linear"
         loop
         playsInline
         onClick={togglePlayPause}
       />
-      <div className="absolute bottom-2 right-1 transition-all text-white text-xl md:text-2xl bg-black bg-opacity-60 rounded-full p-1 md:p-2 text-center flex justify-center items-center">
+      <div className="absolute bottom-2 right-1 transition-all text-white text-lg md:text-xl bg-black bg-opacity-60 rounded-full p-1  text-center flex justify-center items-center">
         {isPlaying ? <MdOutlinePauseCircleOutline /> : <MdOutlinePlayCircle />}
       </div>
 
-      <Badge className="absolute top-2 left-2 text-[0.55rem] tabular-nums py-1 px-1 bg-opacity-60 text-white rounded">
+      <Badge className="absolute  font-bold top-2 left-2 text-[0.55rem] tabular-nums py-1 px-1 bg-opacity-60 text-background rounded">
         {timeLeft}
       </Badge>
     </div>
